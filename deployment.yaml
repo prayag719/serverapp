@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: serverapp
+spec:
+  selector:
+    matchLabels:
+      app: serverapp
+  template:
+    metadata:
+      labels:
+        app: serverapp
+    spec:
+      containers:
+      - name: container1
+        image: prayag10/serverapp
+        ports:
+        - containerPort: 4000
